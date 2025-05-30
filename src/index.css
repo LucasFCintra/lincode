@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 1% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 1% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 271 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 157 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 240 1% 25%;
+    --muted-foreground: 0 0% 63%;
+
+    --accent: 240 1% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 1% 20%;
+    --input: 240 1% 20%;
+    --ring: 271 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 63%;
+    --sidebar-primary: 271 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 1% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 1% 15%;
+    --sidebar-ring: 271 100% 50%;
+  }
+
+  /* Comportamento de rolagem suave */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Para ajustar a velocidade da rolagem */
+  body {
+    @apply bg-background text-white font-['Sora'];
+    overflow-y: auto;
+    scroll-timeline: 1s ease-in-out;
+  }
+
+  /* Estilo para seleção de texto em toda a página */
+  *::selection {
+    background-color: #00FF88;
+    color: #000000;
+  }
+  
+  *::-moz-selection {
+    background-color: #00FF88;
+    color: #000000;
+  }
+
+  /* Estilo para scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00FF88;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00cc6e;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #00FF88 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-['Sora'];
+  }
+
+  .glow-effect {
+    text-shadow: 0 0 10px rgba(127, 0, 255, 0.7);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#7F00FF] to-[#00FF88];
+  }
+
+  .card-gradient {
+    background: linear-gradient(180deg, rgba(127, 0, 255, 0.05) 0%, rgba(0, 255, 136, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .animated-bg {
+    background: radial-gradient(circle at 50% 50%, rgba(127, 0, 255, 0.15), transparent 60%),
+                radial-gradient(circle at 85% 30%, rgba(0, 255, 136, 0.1), transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      background-position: 0% 0%, 85% 30%;
+    }
+    50% {
+      background-position: 5% 5%, 80% 35%;
+    }
+  }
+  
+  .glow-border {
+    position: relative;
+  }
+  
+  .glow-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg, rgba(127, 0, 255, 0.3), rgba(0, 255, 136, 0.3));
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 6 - 32px));
+  }
+}
+
+.animate-carousel {
+  animation: carousel 40s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 35s linear infinite;
+}
+
