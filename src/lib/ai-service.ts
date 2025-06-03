@@ -8,7 +8,7 @@ export async function getAIResponse(message: string): Promise<{ text: string }> 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUGGINGFACE_API_KEY}`,
+        Authorization: `Bearer ${import.meta.env.VITE_HUGGINGFACE_API_KEY}`,
       },
       body: JSON.stringify({
         inputs: message,
