@@ -1,38 +1,38 @@
 import React from 'react';
-import { Command, Paintbrush, Zap, Code, Users, LineChart } from "lucide-react";
+import { Code, Database, Tablet, Rocket, Shield, Zap, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Benefits: React.FC = () => {
   const benefits = [
     {
-      icon: <Paintbrush className="w-10 h-10 text-[#00FF88]" />,
-      title: "Design Moderno",
-      description: "Layouts contemporâneos e responsivos que destacam o seu negócio com estilo e funcionalidade."
+      icon: <Code className="w-10 h-10 text-[#00FF88]" />,
+      title: "Desenvolvimento Personalizado",
+      description: "Criamos soluções sob medida para atender às necessidades específicas do seu negócio e seus objetivos."
     },
     {
       icon: <Zap className="w-10 h-10 text-[#7F00FF]" />,
       title: "Alta Performance",
-      description: "Sites otimizados para carregar rapidamente e oferecer a melhor experiência aos usuários."
+      description: "Sistemas otimizados para operar com rapidez e eficiência, garantindo a melhor experiência aos usuários."
     },
     {
-      icon: <Code className="w-10 h-10 text-[#00FF88]" />,
-      title: "Código Limpo",
-      description: "Desenvolvimento com as melhores práticas de programação para garantir qualidade e manutenibilidade."
+      icon: <Database className="w-10 h-10 text-[#00FF88]" />,
+      title: "Tecnologias Modernas",
+      description: "Utilizamos as mais recentes tecnologias e frameworks para entregar soluções inovadoras e eficientes."
     },
     {
-      icon: <Command className="w-10 h-10 text-[#7F00FF]" />,
-      title: "Soluções Personalizadas",
-      description: "Desenvolvemos projetos sob medida para atender às necessidades específicas do seu negócio."
+      icon: <Tablet className="w-10 h-10 text-[#7F00FF]" />,
+      title: "Design Responsivo",
+      description: "Interfaces adaptáveis a todos os dispositivos, proporcionando uma experiência consistente em qualquer tela."
     },
     {
-      icon: <Users className="w-10 h-10 text-[#00FF88]" />,
-      title: "Suporte Especializado",
-      description: "Equipe dedicada para garantir que seu site permaneça atualizado e funcionando perfeitamente."
+      icon: <Shield className="w-10 h-10 text-[#00FF88]" />,
+      title: "Segurança Avançada",
+      description: "Implementamos protocolos robustos de segurança para proteger seus dados e a privacidade dos usuários."
     },
     {
-      icon: <LineChart className="w-10 h-10 text-[#7F00FF]" />,
-      title: "Análise de Métricas",
-      description: "Acompanhamento detalhado dos resultados para otimizar a conversão e o retorno do investimento."
+      icon: <BarChart className="w-10 h-10 text-[#7F00FF]" />,
+      title: "Escalabilidade",
+      description: "Desenvolvemos sistemas que crescem junto com seu negócio, suportando mais usuários e funcionalidades."
     }
   ];
 
@@ -44,7 +44,7 @@ const Benefits: React.FC = () => {
             Nossos <span className="text-[#00FF88]">Benefícios</span>
           </h2>
           <p className="text-xl text-[#A0A0A0] max-w-3xl mx-auto">
-            Por que escolher a LinCode para desenvolver sua presença digital?
+            Por que escolher a LinCode para desenvolver suas soluções digitais?
           </p>
         </div>
 

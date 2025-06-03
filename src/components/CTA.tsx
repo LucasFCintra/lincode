@@ -3,18 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const generateLandingPageMessage = () => {
-  return encodeURIComponent('Olá! Gostaria de saber mais sobre o desenvolvimento de um site ou landing page profissional.');
+  return encodeURIComponent('Olá! Gostaria de iniciar um projeto de desenvolvimento digital. Tenho interesse específico em discutir detalhes, prazos e valores para começar o quanto antes.');
 };
 
 const CTA = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-16 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Transforme sua <span className="text-[#00FF88]">Presença Digital</span> Hoje
           </h2>
-          <p className="text-xl text-[#A0A0A0] max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-[#A0A0A0] max-w-2xl mx-auto">
             Escolha o caminho ideal para impulsionar seu negócio e conquistar mais clientes online
           </p>
         </div>

@@ -9,7 +9,7 @@ const LinCodeBanner: React.FC = () => {
           <div className="animate-slide-left whitespace-nowrap flex items-center gap-8">
             {[...Array(10)].map((_, index) => (
               <div key={index}>
-                <span className="text-white opacity-20">SOLICITE AGORA SEU ORÇAMENTO • FILTRE MELHOR OS SEUS LEADS • SOLICITE AGORA SEU ORÇAMENTO • FILTRE MELHOR OS SEUS LEADS</span>
+                <span className="text-white opacity-20">SISTEMAS WEB • APLICATIVOS MOBILE • SITES INSTITUCIONAIS • LANDING PAGES • DASHBOARDS • SOFTWARE SOB MEDIDA</span>
               </div>
             ))}
           </div>
@@ -20,7 +20,7 @@ const LinCodeBanner: React.FC = () => {
           <div className="animate-slide-left whitespace-nowrap flex items-center gap-8">
             {[...Array(10)].map((_, index) => (
               <div key={index}>
-                <span className="text-white font-semibold">SOLICITE AGORA SEU ORÇAMENTO • FILTRE MELHOR OS SEUS LEADS • SOLICITE AGORA SEU ORÇAMENTO • FILTRE MELHOR OS SEUS LEADS</span>
+                <span className="text-white font-semibold">DESENVOLVIMENTO DE SOLUÇÕES DIGITAIS • CONSULTORIA TECNOLÓGICA • ALTA PERFORMANCE • DESIGN RESPONSIVO</span>
               </div>
             ))}
           </div>

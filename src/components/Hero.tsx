@@ -4,80 +4,80 @@ import { Star, ChevronDown } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Hero: React.FC = () => {
-  const generateLandingPageMessage = () => {
-    const message = 'Olá! Gostaria de criar uma landing page para meu negócio.';
+  const generateDevelopmentMessage = () => {
+    const message = 'Olá! Gostaria de receber um orçamento para o desenvolvimento de uma solução digital para meu negócio. Preciso de ajuda para entender as melhores opções.';
     return encodeURIComponent(message);
   };
 
   const generateExpertMessage = () => {
-    const message = 'Olá! Gostaria de conversar com um especialista sobre soluções digitais para meu negócio.';
+    const message = 'Olá! Gostaria de agendar uma consultoria com um especialista para discutir as necessidades tecnológicas do meu negócio e possíveis soluções.';
     return encodeURIComponent(message);
   };
 
   return (
-    <section className="min-h-[90vh] flex flex-col justify-start pt-20 relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative z-10">
-        <div className="flex flex-col w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+    <section className="min-h-[85vh] md:min-h-[90vh] flex flex-col justify-start pt-10 md:pt-20 relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-16 relative z-10">
+        <div className="flex flex-col w-full lg:w-1/2 space-y-4 md:space-y-6 text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-white">
-            Transformamos ideias em <span className="text-[#00FF88]">landing pages</span> de <span className="text-[#00FF88]">alto desempenho</span>!
+            Desenvolvemos <span className="text-[#00FF88]">soluções digitais</span> personalizadas
           </h1>
-          <p className="text-lg md:text-xl text-[#A0A0A0] max-w-xl">
-            Desenvolvemos páginas modernas, responsivas e otimizadas para converter <span className="text-[#00FF88]">visitantes em clientes</span>.
+          
+          <p className="text-base md:text-lg lg:text-xl text-[#A0A0A0] max-w-xl mx-auto lg:mx-0">
+            Softwares, sites, aplicativos e sistemas que impulsionam o crescimento do seu negócio
           </p>
           
-          <div className="flex flex-wrap items-center gap-6">
-            <div className="flex items-center gap-4">
-              <div className="flex -space-x-2">
-                <Avatar className="border-2 border-[#1C1C1E] w-6 h-6">
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 md:gap-6">
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-1.5">
+                <Avatar className="border-2 border-[#1C1C1E] w-5 h-5 md:w-6 md:h-6">
                   <AvatarImage src="https://i.pravatar.cc/100?img=1" />
                   <AvatarFallback>CS</AvatarFallback>
                 </Avatar>
-                <Avatar className="border-2 border-[#1C1C1E] w-6 h-6">
+                <Avatar className="border-2 border-[#1C1C1E] w-5 h-5 md:w-6 md:h-6">
                   <AvatarImage src="https://i.pravatar.cc/100?img=2" />
                   <AvatarFallback>AF</AvatarFallback>
                 </Avatar>
-                <Avatar className="border-2 border-[#1C1C1E] w-6 h-6">
+                <Avatar className="border-2 border-[#1C1C1E] w-5 h-5 md:w-6 md:h-6">
                   <AvatarImage src="https://i.pravatar.cc/100?img=3" />
                   <AvatarFallback>MO</AvatarFallback>
                 </Avatar>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-white font-semibold">+120</span>
-                <span className="text-[#A0A0A0]">clientes satisfeitos</span>
+              <div className="flex items-center gap-1">
+                <span className="text-white font-semibold text-sm md:text-base">+120</span>
+                <span className="text-[#A0A0A0] text-xs md:text-sm">clientes</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-[#00FF88] fill-[#00FF88]" />
+                  <Star key={i} className="h-3 w-3 md:h-4 md:w-4 text-[#00FF88] fill-[#00FF88]" />
                 ))}
               </div>
-              <span className="text-white font-semibold">5.0</span>
-              <span className="text-[#A0A0A0]">avaliação média</span>
+              <span className="text-white font-semibold text-sm md:text-base">5.0</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-2 md:mt-4 justify-center lg:justify-start">
             <Button 
               className="bg-[#00FF88] text-black hover:bg-[#00FF88]/90 text-lg px-8 py-6 rounded-xl shadow-lg shadow-[#00FF88]/20 hover:shadow-[#00FF88]/40 transition-all duration-300"
-              onClick={() => window.open(`https://wa.me/5516999891209?text=${generateLandingPageMessage()}`, '_blank')}
+              onClick={() => window.open(`https://wa.me/5516999891209?text=${generateDevelopmentMessage()}`, '_blank')}
             >
-              Criar Landing Page
+              Solicitar Orçamento
             </Button>
             <Button 
               variant="outline" 
               className="border-2 border-[#00FF88] text-[#00FF88] hover:bg-[#00FF88]/10 text-lg px-8 py-6 rounded-xl shadow-lg shadow-[#00FF88]/10 hover:shadow-[#00FF88]/20 transition-all duration-300"
               onClick={() => window.open(`https://wa.me/5516999891209?text=${generateExpertMessage()}`, '_blank')}
             >
-              Falar com um especialista
+              Falar com especialista
             </Button>
           </div>
         </div>
         
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <div className="relative w-full max-w-lg aspect-square hidden md:block">
-            {/* Componente Principal - Analytics */}
+            {/* Componente Principal - Dashboard de Desenvolvimento */}
             <div className="absolute inset-0 animate-float-main">
               <div className="absolute inset-0 bg-gradient-to-r from-[#7F00FF]/20 to-[#00FF88]/20 rounded-xl blur-xl"></div>
               
@@ -94,29 +94,29 @@ const Hero: React.FC = () => {
                             <div className="w-3 h-3 rounded-full bg-white/20"></div>
                           </div>
                           <div className="px-4 py-1 rounded-full bg-white/10 text-xs text-white/70">
-                            Analytics
+                            Dashboard
                           </div>
                         </div>
                         
                         <div className="flex-1 p-4 grid grid-cols-2 gap-3 auto-rows-min">
                           <div className="bg-[#7F00FF]/20 p-3 rounded-lg border border-[#7F00FF]/30">
-                            <div className="text-xs text-white/60 mb-1">Conversões</div>
-                            <div className="text-xl text-white font-bold">+ 89%</div>
+                            <div className="text-xs text-white/60 mb-1">Projetos</div>
+                            <div className="text-xl text-white font-bold">+ 24</div>
                             <div className="h-2 w-full bg-white/10 rounded-full mt-2">
                               <div className="h-full w-[89%] bg-[#7F00FF] rounded-full"></div>
                             </div>
                           </div>
                           
                           <div className="bg-[#00FF88]/20 p-3 rounded-lg border border-[#00FF88]/30">
-                            <div className="text-xs text-white/60 mb-1">Visitantes</div>
-                            <div className="text-xl text-white font-bold">2.4k</div>
+                            <div className="text-xs text-white/60 mb-1">Sistemas</div>
+                            <div className="text-xl text-white font-bold">15</div>
                             <div className="h-2 w-full bg-white/10 rounded-full mt-2">
                               <div className="h-full w-[75%] bg-[#00FF88] rounded-full"></div>
                             </div>
                           </div>
                           
                           <div className="col-span-2 bg-white/5 p-3 rounded-lg border border-white/10">
-                            <div className="text-xs text-white/60 mb-3">Visitantes Semanais</div>
+                            <div className="text-xs text-white/60 mb-3">Desenvolvimento Semanal</div>
                             <div className="flex items-end justify-between h-16">
                               {[40, 60, 45, 75, 65, 90, 70].map((h, i) => (
                                 <div key={i} className="w-[8%] h-full flex items-end">
@@ -139,11 +139,11 @@ const Hero: React.FC = () => {
                           </div>
 
                           <div className="col-span-2 bg-white/5 p-3 rounded-lg border border-white/10">
-                            <div className="text-xs text-white/60 mb-2">Conversão por Origem</div>
+                            <div className="text-xs text-white/60 mb-2">Tipos de Projetos</div>
                             <div className="space-y-2">
                               <div className="space-y-1">
                                 <div className="flex justify-between text-xs">
-                                  <span className="text-white/80">Google Ads</span>
+                                  <span className="text-white/80">Sistemas Web</span>
                                   <span className="text-[#00FF88]">45%</span>
                                 </div>
                                 <div className="h-1.5 w-full bg-white/10 rounded-full">
@@ -152,7 +152,7 @@ const Hero: React.FC = () => {
                               </div>
                               <div className="space-y-1">
                                 <div className="flex justify-between text-xs">
-                                  <span className="text-white/80">Instagram</span>
+                                  <span className="text-white/80">Apps Mobile</span>
                                   <span className="text-[#7F00FF]">35%</span>
                                 </div>
                                 <div className="h-1.5 w-full bg-white/10 rounded-full">
@@ -161,7 +161,7 @@ const Hero: React.FC = () => {
                               </div>
                               <div className="space-y-1">
                                 <div className="flex justify-between text-xs">
-                                  <span className="text-white/80">Orgânico</span>
+                                  <span className="text-white/80">Sites</span>
                                   <span className="text-white">20%</span>
                                 </div>
                                 <div className="h-1.5 w-full bg-white/10 rounded-full">
@@ -178,79 +178,72 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Componente Flutuante - Leads */}
+            {/* Componente Flutuante - Código */}
             <div className="absolute -right-8 -top-8 w-64 bg-[#1C1C1E] rounded-xl p-4 border border-white/10 animate-float-leads">
               <div className="absolute inset-0 bg-gradient-to-br from-[#7F00FF]/10 to-[#00FF88]/10 rounded-xl"></div>
               <div className="relative">
                 <div className="flex justify-between items-center mb-3">
-                  <div className="text-xs text-white/60">Leads Ativos</div>
-                  <div className="text-xs text-[#00FF88]">3 Online</div>
+                  <div className="text-xs text-white/60">Código</div>
+                  <div className="text-xs text-[#00FF88]">Desenvolvimento</div>
                 </div>
-                {[1, 2, 3].map((_, i) => (
-                  <div key={i} className="flex items-center gap-2 py-2 border-b border-white/5 last:border-0">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#7F00FF] to-[#00FF88] flex items-center justify-center text-[10px] text-white">
-                      {String.fromCharCode(65 + i)}
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-xs text-white/80">Lead #{i + 1}</div>
-                      <div className="text-[10px] text-white/40">Há {i + 1}min</div>
-                    </div>
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#00FF88]"></div>
-                  </div>
-                ))}
+                <div className="bg-black/50 p-2 rounded-md text-[10px] font-mono text-white/80">
+                  <div className="text-[#7F00FF]">function</div> 
+                  <div><span className="text-[#00FF88]">criarSistema</span>() {'{'}</div>
+                  <div className="pl-3 text-white/60">return new Aplicacao({'{'}</div>
+                  <div className="pl-6">tipo: <span className="text-[#00FF88]">'personalizado'</span>,</div>
+                  <div className="pl-6">cliente: <span className="text-[#00FF88]">'seu_negocio'</span></div>
+                  <div className="pl-3">{'}'});</div>
+                  <div>{'}'}</div>
+                </div>
               </div>
             </div>
 
-            {/* Componente Flutuante - Engajamento */}
+            {/* Componente Flutuante - Tecnologias */}
             <div className="absolute -left-12 -bottom-6 w-64 bg-[#1C1C1E] rounded-xl p-4 border border-white/10 animate-float-engagement">
               <div className="absolute inset-0 bg-gradient-to-br from-[#00FF88]/10 to-[#7F00FF]/10 rounded-xl"></div>
               <div className="relative">
                 <div className="flex items-center justify-between mb-3">
-                  <div className="text-xs text-white/60">Engajamento</div>
+                  <div className="text-xs text-white/60">Tecnologias</div>
                   <div className="flex items-center gap-1">
                     <div className="w-2 h-2 rounded-full bg-[#00FF88] animate-pulse"></div>
-                    <span className="text-[10px] text-white/60">Ao Vivo</span>
+                    <span className="text-[10px] text-white/60">Atualizadas</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="bg-white/5 rounded-lg p-2">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#7F00FF] to-[#00FF88] flex items-center justify-center">
-                          <div className="w-4 h-4 rounded-full bg-white/20"></div>
-                        </div>
-                        <div>
-                          <div className="text-[10px] text-white/80">Usuários Ativos</div>
-                          <div className="text-xs text-white font-bold">847</div>
-                        </div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#7F00FF] to-[#00FF88] flex items-center justify-center text-white text-xs font-bold">
+                        R
                       </div>
-                      <div className="text-[10px] text-[#00FF88]">+12%</div>
-                    </div>
-                    <div className="flex items-end gap-1 h-8 mt-2">
-                      {[35, 45, 40, 50, 48, 42, 55, 60, 58, 48, 50, 65].map((h, i) => (
-                        <div 
-                          key={i}
-                          className="flex-1 bg-gradient-to-t from-[#7F00FF] to-[#00FF88] rounded-sm"
-                          style={{ height: `${h}%` }}
-                        ></div>
-                      ))}
-                    </div>
-                    <div className="text-[8px] text-white/40 text-center mt-1">
-                      Últimos 12 minutos
+                      <div>
+                        <div className="text-xs text-white font-bold">React.js</div>
+                        <div className="text-[10px] text-white/60">Front-end</div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="bg-white/5 rounded-lg p-2">
-                      <div className="text-[10px] text-white/60">Tempo Médio</div>
-                      <div className="text-sm text-white font-bold">4m 32s</div>
-                      <div className="text-[10px] text-[#00FF88]">+18%</div>
+                  <div className="bg-white/5 rounded-lg p-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#7F00FF] to-[#00FF88] flex items-center justify-center text-white text-xs font-bold">
+                        N
+                      </div>
+                      <div>
+                        <div className="text-xs text-white font-bold">Node.js</div>
+                        <div className="text-[10px] text-white/60">Back-end</div>
+                      </div>
                     </div>
-                    <div className="bg-white/5 rounded-lg p-2">
-                      <div className="text-[10px] text-white/60">Taxa de Rejeição</div>
-                      <div className="text-sm text-white font-bold">0.8%</div>
-                      <div className="text-[10px] text-[#00FF88]">-5%</div>
+                  </div>
+
+                  <div className="bg-white/5 rounded-lg p-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#7F00FF] to-[#00FF88] flex items-center justify-center text-white text-xs font-bold">
+                        M
+                      </div>
+                      <div>
+                        <div className="text-xs text-white font-bold">Mobile</div>
+                        <div className="text-[10px] text-white/60">Flutter/Native</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -262,17 +255,17 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#7F00FF]/10 to-[#00FF88]/10 rounded-xl"></div>
               <div className="relative">
                 <div className="flex items-center justify-between mb-3">
-                  <div className="text-xs text-white/60">Performance</div>
+                  <div className="text-xs text-white/60">Soluções</div>
                   <div className="px-2 py-1 rounded-full bg-[#00FF88]/20 text-[10px] text-[#00FF88]">
-                    Excelente
+                    Premium
                   </div>
                 </div>
                 
                 <div className="space-y-3">
                   <div className="bg-white/5 rounded-lg p-2">
                     <div className="flex items-center justify-between mb-2">
-                      <div className="text-[10px] text-white/80">Tempo de Carregamento</div>
-                      <div className="text-[10px] text-[#00FF88]">0.8s</div>
+                      <div className="text-[10px] text-white/80">Sistemas Web</div>
+                      <div className="text-[10px] text-[#00FF88]">Completos</div>
                     </div>
                     <div className="flex gap-1">
                       {[98, 95, 97, 94, 99, 96, 98].map((score, i) => (
@@ -285,19 +278,19 @@ const Hero: React.FC = () => {
                       ))}
                     </div>
                     <div className="flex justify-between text-[8px] text-white/40 mt-1">
-                      <span>DOM</span>
-                      <span>CSS</span>
-                      <span>JS</span>
-                      <span>IMG</span>
+                      <span>CRM</span>
+                      <span>ERP</span>
                       <span>API</span>
-                      <span>FCP</span>
-                      <span>TTI</span>
+                      <span>E-COM</span>
+                      <span>DASH</span>
+                      <span>APPS</span>
+                      <span>AI</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-3 gap-2">
                     <div className="bg-white/5 rounded-lg p-2">
-                      <div className="text-[10px] text-white/60 mb-1">Desktop</div>
+                      <div className="text-[10px] text-white/60 mb-1">Web</div>
                       <div className="text-sm text-white font-bold">98%</div>
                       <div className="h-1 w-full bg-white/10 rounded-full mt-1">
                         <div className="h-full w-[98%] bg-[#00FF88] rounded-full"></div>
@@ -311,7 +304,7 @@ const Hero: React.FC = () => {
                       </div>
                     </div>
                     <div className="bg-white/5 rounded-lg p-2">
-                      <div className="text-[10px] text-white/60 mb-1">SEO</div>
+                      <div className="text-[10px] text-white/60 mb-1">Desktop</div>
                       <div className="text-sm text-white font-bold">100%</div>
                       <div className="h-1 w-full bg-white/10 rounded-full mt-1">
                         <div className="h-full w-full bg-gradient-to-r from-[#7F00FF] to-[#00FF88] rounded-full"></div>
@@ -324,6 +317,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+
       
       {/* Botão Conheça Mais */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center">

@@ -7,8 +7,9 @@ import Portfolio from "@/components/Portfolio";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import AnimatedBackground from "@/components/AnimatedBackground";
-import { Chat } from "@/components/Chat";
+// import { Chat } from "@/components/Chat"; // Chat temporariamente desativado
 
 const Index = () => {
   useEffect(() => {
@@ -31,13 +32,14 @@ const Index = () => {
         
         <main>
           <Hero />
+          <ContactForm />
           <Benefits />
           <LinCodeBanner />
           <Portfolio />
           <Testimonials />
           <FAQ />
           <CTA />
-          <Chat />
+          {/* Chat temporariamente desativado - será implementado posteriormente */}
         </main>
         
         <Footer />

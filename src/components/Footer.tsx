@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-4">Contato</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="mailto:contato@lincode.com.br" className="text-[#A0A0A0] hover:text-[#00FF88] transition">
-                    contato@lincode.com.br
+                  <a href="mailto:contato.lincode@gmail.com" className="text-[#A0A0A0] hover:text-[#00FF88] transition">
+                    contato.lincode@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+5511999999999" className="text-[#A0A0A0] hover:text-[#00FF88] transition">
-                    +55 (11) 99999-9999
+                  <a href="tel:+5516999891209" className="text-[#A0A0A0] hover:text-[#00FF88] transition">
+                    +55 (16) 99989-1209
                   </a>
                 </li>
               </ul>
@@ -49,13 +49,8 @@ const Footer: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-4">Redes Sociais</h3>
                   <ul className="space-y-3">
                     <li>
-                      <a href="#" className="text-[#A0A0A0] hover:text-[#00FF88] transition">
+                      <a href="https://www.instagram.com/l.incode/" target="_blank" rel="noopener noreferrer" className="text-[#A0A0A0] hover:text-[#00FF88] transition">
                         Instagram
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-[#A0A0A0] hover:text-[#00FF88] transition">
-                        LinkedIn
                       </a>
                     </li>
                   </ul>
@@ -78,7 +73,7 @@ const Footer: React.FC = () => {
                 © {new Date().getFullYear()} LinCode. Todos os direitos reservados.
               </p>
               <p className="text-[#A0A0A0] text-sm mt-2 md:mt-0">
-                Esse site foi desenvolvido por <a href="#" className="text-[#00FF88] hover:underline">LinCode</a>
+                Esse site foi desenvolvido por <a href="https://www.instagram.com/l.incode/" target="_blank" rel="noopener noreferrer" className="text-[#00FF88] hover:underline">LinCode</a>
               </p>
             </div>
           </div>

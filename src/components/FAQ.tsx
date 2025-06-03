@@ -11,28 +11,32 @@ const FAQ: React.FC = () => {
   
   const faqItems = [
     {
-      question: "Quanto tempo leva para desenvolver uma landing page?",
-      answer: "O tempo de desenvolvimento depende da complexidade do projeto, mas geralmente entregamos landing pages em 7 a 14 dias após a aprovação do briefing e do design."
+      question: "Quais tipos de soluções digitais vocês desenvolvem?",
+      answer: "Desenvolvemos uma ampla gama de soluções digitais, incluindo sistemas web completos, aplicativos mobile (iOS e Android), sites institucionais, e-commerce, landing pages, dashboards analíticos e soluções personalizadas para necessidades específicas do seu negócio."
     },
     {
-      question: "Quais informações são necessárias para começar um projeto?",
-      answer: "Precisamos de informações sobre sua empresa, o objetivo do site, seu público-alvo, exemplos de sites que você gosta, e qualquer material de marca que você tenha (logo, cores, etc)."
+      question: "Quanto tempo leva para desenvolver um projeto digital?",
+      answer: "O prazo varia conforme a complexidade e o escopo do projeto. Aplicativos simples e websites podem levar de 4 a 8 semanas, enquanto sistemas mais complexos podem exigir 3 a 6 meses. Fornecemos um cronograma detalhado durante a fase de planejamento do projeto."
     },
     {
-      question: "As landing pages são otimizadas para SEO?",
-      answer: "Sim, desenvolvemos todas as nossas páginas com as melhores práticas de SEO, incluindo meta-tags otimizadas, estrutura semântica, velocidade de carregamento e compatibilidade mobile."
+      question: "Quais tecnologias vocês utilizam nos projetos?",
+      answer: "Trabalhamos com as tecnologias mais modernas e eficientes do mercado, incluindo React, Angular e Vue para frontend; Node.js, Python e PHP para backend; React Native e Flutter para desenvolvimento mobile; e soluções em nuvem como AWS, Google Cloud e Azure para infraestrutura."
     },
     {
-      question: "É possível integrar com sistemas de pagamento ou CRM?",
-      answer: "Sim, podemos integrar sua landing page com diversos sistemas, incluindo plataformas de pagamento, CRMs, ferramentas de marketing e automação."
+      question: "Como funciona o processo de desenvolvimento?",
+      answer: "Nosso processo segue metodologias ágeis e inclui: 1) Levantamento de requisitos e planejamento; 2) Design de interface e experiência do usuário; 3) Desenvolvimento; 4) Testes e garantia de qualidade; 5) Implementação e lançamento; 6) Suporte e manutenção contínuos."
     },
     {
-      question: "Vocês oferecem hospedagem para o site?",
-      answer: "Sim, oferecemos soluções de hospedagem confiáveis e seguras como parte de nossos pacotes, mas também podemos implantar em seu provedor de preferência."
+      question: "Vocês oferecem suporte após a conclusão do projeto?",
+      answer: "Sim, oferecemos diversos planos de suporte e manutenção que incluem correções de bugs, atualizações de segurança, otimizações de desempenho, backup regular e implementação de novas funcionalidades conforme necessário."
     },
     {
-      question: "Como funciona o processo de manutenção após a entrega?",
-      answer: "Oferecemos planos de manutenção mensal que incluem atualizações, correções de bugs, backup regular e monitoramento de segurança."
+      question: "É possível integrar meu sistema com outras plataformas?",
+      answer: "Absolutamente. Desenvolvemos soluções que se integram perfeitamente com sistemas existentes, incluindo CRMs, ERPs, plataformas de e-commerce, gateways de pagamento, ferramentas de marketing e APIs de terceiros para ampliar a funcionalidade do seu sistema."
+    },
+    {
+      question: "Como garantem a segurança dos sistemas desenvolvidos?",
+      answer: "Implementamos as melhores práticas de segurança, incluindo criptografia de dados, autenticação segura, proteção contra vulnerabilidades comuns (como injeção SQL e XSS), testes de penetração e conformidade com regulamentações como LGPD e GDPR."
     }
   ];
 
@@ -48,12 +52,12 @@ const FAQ: React.FC = () => {
             Perguntas <span className="text-[#00FF88]">Frequentes</span>
           </h2>
           <p className="text-xl text-[#A0A0A0] max-w-3xl mx-auto">
-            Tire suas dúvidas sobre nossos serviços e processos
+            Tire suas dúvidas sobre nosso processo de desenvolvimento e soluções digitais
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-[#1C1C1E] backdrop-blur-sm rounded-xl border border-white/5 overflow-hidden">
-          <Accordion type="single" collapsible className="w-full">
+        <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden shadow-xl">
+          <Accordion type="single" collapsible className="w-full relative z-10">
             {faqItems.map((item, index) => (
               <AccordionItem 
                 key={index} 
@@ -69,7 +73,7 @@ const FAQ: React.FC = () => {
                   </span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-6 text-[#A0A0A0] data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
-                  <div className="border-l-2 border-[#7F00FF] pl-4">
+                  <div className="border-l-2 border-[#00FF88] pl-4">
                     {item.answer}
                   </div>
                 </AccordionContent>
