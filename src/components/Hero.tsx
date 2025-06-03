@@ -320,11 +320,11 @@ const Hero: React.FC = () => {
 
       
       {/* Botão Conheça Mais */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+      <div className="absolute md:bottom-8 bottom-24 left-0 right-0 flex justify-center">
         <Button 
           variant="ghost" 
           size="sm" 
-          className="text-[#A0A0A0] hover:text-white flex flex-col items-center gap-2 animate-[float_3s_ease-in-out_infinite]"
+          className="text-[#A0A0A0] hover:text-white flex flex-col items-center gap-2 animate-[float_3s_ease-in-out_infinite] bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full"
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
           Conheça mais
